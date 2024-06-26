@@ -214,3 +214,19 @@ a{
     display: block;
     margin-top: 10px;
 }
+
+.cantidad-control {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.cantidad-control button {
+  margin: 0 5px;
+  padding: 5px 10px;
+}
+
+.cantidad-control span {
+  margin: 0 10px;
+}

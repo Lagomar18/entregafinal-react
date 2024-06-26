@@ -1,11 +1,11 @@
 import React, { useContext } from 'react';
 import { CartContext } from '../context/CartContext';
 import Swal from 'sweetalert2';
-import { ToastContainer, toast } from 'react-toastify';
+import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
 const Carrito = () => {
-  const { carrito, calcularTotal, vaciarCarrito } = useContext(CartContext);
+  const { carrito, calcularTotal, vaciarCarrito, agregarProducto, quitarProducto } = useContext(CartContext);
 
   const confirmarVaciarCarrito = () => {
     Swal.fire({
@@ -40,7 +40,11 @@ const Carrito = () => {
           <img src={prod.imagen} alt={prod.nombre} />
           <h1>{prod.nombre}</h1>
           <p>Precio: ${prod.precio}</p>
-          <p>Cantidad: {prod.cantidad}</p>
+          <div className="cantidad-control">
+            <button onClick={() => quitarProducto(prod)}>-</button>
+            <span>{prod.cantidad}</span>
+            <button onClick={() => agregarProducto(prod)}>+</button>
+          </div>
         </div>
       ))}
       {carrito.length > 0 ? (
