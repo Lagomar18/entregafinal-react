@@ -1,0 +1,216 @@
+/* Estilos globales para resetear márgenes y rellenar */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Definición de esquema de color para el tema */
+:root {
+    color-scheme: light dark;
+}
+
+/* Estilos para la barra de navegación en la parte superior */
+.header {
+    background-color: rgb(62, 94, 94); /* Color de fondo */
+    display: flex; /* Mostrar elementos en línea */
+    justify-content: space-between; /* Espaciado uniforme entre los elementos */
+    padding: 1rem; /* Relleno interno */
+    align-items: center; /* Alinear elementos verticalmente */
+}
+
+/* Estilos para el contenedor principal */
+.container {
+    max-width: 1000px; /* Ancho máximo del contenedor */
+    margin: auto; /* Centrar horizontalmente */
+    padding: 2rem; /* Relleno interno */
+    display: flex; /* Mostrar elementos en línea */
+    gap: 1rem; /* Espacio entre elementos */
+}
+
+/* Estilos para la navegación */
+.nav {
+    display: flex; /* Mostrar elementos en línea */
+}
+
+/* Estilos para el menú de navegación */
+.nav-menu {
+    list-style-type: none; /* Quitar viñetas de la lista */
+    display: flex; /* Mostrar elementos en línea */
+    gap: .5rem; /* Espacio entre elementos */
+}
+
+/* Estilos para los enlaces de navegación */
+.nav-link {
+    color: rgb(136, 190, 28); /* Color del texto */
+    text-decoration: none; /* Quitar subrayado */
+}
+
+/* Estilos para el enlace de navegación activo */
+.nav-link.active {
+    font-weight: bold; /* Texto en negrita */
+    text-decoration: underline; /* Subrayado */
+}
+
+/* Estilos para los títulos */
+h1 {
+    color: rgb(128, 177, 31); /* Color del texto */
+}
+
+/* Estilos para el contenedor de productos */
+.products-container {
+    min-height: 30vh; /* Altura mínima */
+    display: grid; /* Mostrar como una cuadrícula */
+    place-items: center; /* Alinear contenido al centro */
+}
+
+/* Clase para fondos oscuros */
+.oscuro {
+    background-color: black !important; /* Fondo oscuro */
+}
+
+/* Estilos para el contenedor de lista de elementos */
+.item-list-container {
+    max-width: 80vh; /* Ancho máximo */
+    margin: 20px; /* Margen exterior */
+    min-height: calc(100vh - 40px); /* Altura mínima */
+    padding: 20px; /* Relleno interno */
+    box-sizing: border-box; /* El tamaño incluye el relleno */
+    background-color: rgba(255, 255, 255, 0.2); /* Color de fondo con transparencia */
+    border-radius: 10px; /* Borde redondeado */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra */
+    margin-bottom: 5rem;    /* Margen inferior  */
+}
+
+/* Estilos para los productos */
+.producto {
+    display: flex; /* Mostrar elementos en columna */
+    flex-direction: column; /* Columna */
+    width: auto; /* Ancho automático */
+    background-color: rgb(62, 94, 94); /* Color de fondo */
+    border-radius: .5rem; /* Borde redondeado */
+    padding: 2rem; /* Relleno interno */
+    color: white; /* Color del texto */
+}
+
+/* Estilos para la grilla de productos */
+.productos-grilla {
+    display: grid; /* Mostrar como una cuadrícula */
+    grid-template-columns: 1fr 1fr 1fr; /* Tres columnas */
+    gap: 1rem; /* Espacio entre elementos */
+}
+
+/* Estilos para la imagen del producto */
+.producto img {
+    width: 100%; /* La imagen ocupa todo el ancho */
+    height: 75%; /* Altura del 75% del contenedor */
+    object-fit: cover; /* Ajustar la imagen para cubrir el contenedor */
+}
+
+/* Estilos para la imagen de fondo */
+.background-image {
+    background-image: url('../assets/img/fondo3.jpg'); /* Imagen de fondo */
+    background-position: center; /* Posición centrada */
+    background-attachment: fixed; /* Fondo fijo */
+    display: flex; /* Mostrar elementos en línea */
+    justify-content: center; /* Alinear horizontalmente al centro */
+    align-items: center; /* Alinear verticalmente al centro */
+}
+
+/* Estilos para la tarjeta de detalles del producto */
+.detalle-tarjeta {
+    background-color: rgba(62, 94, 94); /* Color de fondo con transparencia */
+    border-radius: 0.5rem; /* Borde redondeado */
+    padding: 1rem; /* Relleno interno */
+    color: white; /* Color del texto */
+    width: 500px; /* Ancho fijo */
+    height: auto; /* Altura automática */
+    margin: auto; /* Centrar horizontalmente */
+    margin-top: 50px; /* Margen superior */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra */
+    display: flex; /* Mostrar elementos en columna */
+    flex-direction: column; /* Columna */
+    justify-content: space-between; /* Espacio uniforme entre elementos */
+    align-items: center; /* Alinear elementos al centro */
+}
+
+/* Estilos para la imagen dentro de la tarjeta de detalles del producto */
+.detalle-tarjeta img {
+    width: 100%; /* La imagen ocupa todo el ancho */
+    height: auto; /* Altura automática */
+    max-height: 400px; /* Altura máxima */
+    object-fit: contain; /* Ajustar imagen para que quepa dentro sin distorsionar */
+    margin-bottom: 1rem; /* Margen inferior */
+}
+
+
+/* Estilos para el pie de página */
+footer {
+    position: fixed; /* Posicionamiento fijo para mantener el pie de página en la parte inferior */
+    bottom: 0; /* Fijar el pie de página en la parte inferior de la ventana */
+    width: 100%; /* Ancho completo del pie de página */
+    height: 3.5rem; /* Altura del pie de página */
+    background-color: rgb(62, 94, 94); /* Color de fondo */
+    display: flex; /* Mostrar elementos en línea */
+    justify-content: space-between; /* Espaciado uniforme entre los elementos */
+    padding: 1rem; /* Relleno interno */
+    align-items: center; /* Alinear elementos verticalmente */
+}
+
+/* Estilos para las redes sociales en el pie de página */
+.redes-sociales img {
+    width: 30px; /* Ancho de las imágenes de redes sociales */
+    margin-right: 10px; /* Margen derecho entre las imágenes */
+}
+
+/* Estilos para los créditos en el pie de página */
+.creditos {
+    font-size: 18px; /* Tamaño de fuente para los créditos */
+}
+
+a{
+    color: rgb(136, 190, 28)
+}
+
+
+.detalle-tarjeta {
+    border: 1px solid #ddd;
+    padding: 16px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s;
+}
+
+.detalle-tarjeta:hover {
+    transform: scale(1.05);
+}
+
+.detalle-tarjeta img {
+    max-width: 100%;
+    height: auto;
+}
+
+.detalle-tarjeta button {
+    background-color: #0a8110;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    margin-top: 10px;
+}
+
+.detalle-tarjeta button:hover {
+    background-color: rgb(128, 177, 31);
+}
+
+.detalle-tarjeta select {
+    margin-top: 10px;
+    padding: 5px;
+    font-size: 16px;
+}
+
+.detalle-tarjeta label {
+    display: block;
+    margin-top: 10px;
+}
