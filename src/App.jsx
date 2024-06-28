@@ -9,6 +9,7 @@ import { CartProvider } from "./context/CartContext";
 import Carrito from "./components/Carrito";
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import { CheckOut } from "./components/CheckOut";
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
           <Route path="/" element={<ItemListContainer />} />
           <Route path="/category/:categoryId" element={<ItemListContainer />} />
           <Route path="/item/:itemId" element={<ItemDetailContainer />} />
+          <Route path="/finalizar-compra" element={<CheckOut />} />
           <Route path="/carrito" element={<Carrito />} />
           <Route path="/*" element={<NotFound />} />
         </Routes>

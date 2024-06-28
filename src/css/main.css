@@ -230,3 +230,219 @@ a{
 .cantidad-control span {
   margin: 0 10px;
 }
+
+/* Estilos para el contenedor del formulario de pago */
+.checkout-container {
+    max-width: 500px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+/* Estilos para el contenedor del formulario de pago */
+.checkout-container {
+    max-width: 500px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Estilos para el formulario de pago */
+.checkout-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+/* Estilos para los campos de entrada */
+.checkout-form input {
+    padding: 0.5rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+/* Estilos para los mensajes de error */
+.checkout-form span {
+    color: red;
+    font-size: 0.875rem;
+}
+
+/* Estilos para el botón de compra */
+.checkout-form button {
+    background-color: #0a8110;
+    color: white;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    border-radius: 5px;
+}
+
+.checkout-form button:hover {
+    background-color: rgb(128, 177, 31);
+}
+
+/* Estilos para el mensaje de agradecimiento */
+.mensaje-agradecimiento {
+    max-width: 500px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background-color: rgba(62, 94, 94, 0.8);
+    color: white;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.mensaje-agradecimiento h1 {
+    color: rgb(128, 177, 31);
+}
+
+.mensaje-agradecimiento p {
+    margin-top: 1rem;
+    font-size: 1.2rem;
+}
+
+
+/* Estilos específicos para el componente Carrito */
+/* Estilos específicos para el componente Carrito */
+
+/* Contenedor principal del carrito */
+.carrito-container {
+    max-width: 800px;
+    margin: auto;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin-bottom: 5rem;
+}
+
+/* Estilos para los elementos individuales del carrito */
+.carrito-item {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    margin-bottom: 10px;
+    background-color: rgba(62, 94, 94, 0.8);
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s;
+}
+
+.carrito-item:hover {
+    transform: scale(1.02);
+}
+
+/* Imagen del producto en el carrito */
+.carrito-imagen {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-right: 20px;
+}
+
+/* Nombre del producto en el carrito */
+.carrito-nombre {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: white;
+}
+
+/* Precio del producto en el carrito */
+.carrito-precio {
+    color: white;
+}
+
+/* Controles de cantidad en el carrito */
+.carrito-cantidad-control {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+}
+
+.carrito-cantidad-control button {
+    background-color: #0a8110;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.carrito-cantidad-control button:hover {
+    background-color: rgb(128, 177, 31);
+}
+
+.carrito-cantidad-control span {
+    margin: 0 10px;
+    font-size: 1rem;
+    font-weight: bold;
+    color: white;
+}
+
+/* Total del carrito */
+.carrito-total {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: white;
+    text-align: center; /* Centrar el total */
+    margin-top: 1rem;
+}
+
+/* Botón para vaciar carrito */
+.carrito-vaciar {
+    background-color: #d9534f;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.2s;
+    margin-top: 10px;
+    margin-right: 20px; /* Espacio fijo entre los botones */
+}
+
+.carrito-vaciar:hover {
+    background-color: #c9302c;
+}
+
+/* Enlace para finalizar compra */
+.carrito-finalizar-compra {
+    background-color: #0a8110;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    text-decoration: none;
+    display: inline-block;
+    border-radius: 5px;
+    transition: background-color 0.2s;
+    margin-top: 10px;
+    margin-left: auto; /* Mover a la derecha */
+    margin-right: 20px; /* Espacio fijo entre los botones */
+}
+
+.carrito-finalizar-compra:hover {
+    background-color: rgb(128, 177, 31);
+}
+
+/* Mensaje cuando el carrito está vacío */
+.carrito-vacio {
+    text-align: center;
+    margin-top: 2rem;
+    color: white;
+}
+
+.carrito-vacio a {
+    color: #0a8110;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.carrito-vacio a:hover {
+    text-decoration: underline;
+}

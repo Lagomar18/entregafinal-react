@@ -3,6 +3,7 @@ import { CartContext } from '../context/CartContext';
 import Swal from 'sweetalert2';
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import { Link } from 'react-router-dom';
 
 const Carrito = () => {
   const { carrito, calcularTotal, vaciarCarrito, agregarProducto, quitarProducto } = useContext(CartContext);
@@ -34,13 +35,13 @@ const Carrito = () => {
   };
 
   return (
-    <div className="detalle-tarjeta">
+    <div className="carrito-container">
       {carrito.map((prod) => (
-        <div key={prod.id} className="producto-carrito">
-          <img src={prod.imagen} alt={prod.nombre} />
-          <h1>{prod.nombre}</h1>
-          <p>Precio: ${prod.precio}</p>
-          <div className="cantidad-control">
+        <div key={prod.id} className="carrito-item">
+          <img src={prod.imagen} alt={prod.nombre} className="carrito-imagen" />
+          <h1 className="carrito-nombre">{prod.nombre}</h1>
+          <p className="carrito-precio">Precio: ${prod.precio}</p>
+          <div className="carrito-cantidad-control">
             <button onClick={() => quitarProducto(prod)}>-</button>
             <span>{prod.cantidad}</span>
             <button onClick={() => agregarProducto(prod)}>+</button>
@@ -49,14 +50,15 @@ const Carrito = () => {
       ))}
       {carrito.length > 0 ? (
         <>
-          <h2>Total: ${calcularTotal()}</h2>
-          <button onClick={confirmarVaciarCarrito}>Vaciar carrito</button>
+          <h2 className="carrito-total">Total: ${calcularTotal()}</h2>
+          <Link to="/finalizar-compra" className="carrito-finalizar-compra">Finalizar compra</Link>
+          <button onClick={confirmarVaciarCarrito} className="carrito-vaciar">Vaciar carrito</button>
         </>
       ) : (
-        <div>
+        <div className="carrito-vacio">
           <h2>Carrito vacío :/</h2>
           <p>
-            ¿Desea continuar comprando? <a href="/">Ir a inicio</a>
+            ¿Desea continuar comprando? <a href="/" className="carrito-continuar-comprando">Ir a inicio</a>
           </p>
         </div>
       )}
